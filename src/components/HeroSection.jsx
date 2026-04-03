@@ -7,6 +7,22 @@ const COMMANDS = [
   { cmd: '/products', page: 'products', label: 'Explore our products' }
 ]
 
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false)
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= breakpoint)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [breakpoint])
+  
+  return isMobile
+}
+
 function BinaryRain() {
   const columns = useMemo(() => {
     const cols = []
@@ -54,6 +70,7 @@ function HeroSection({ onNavigate }) {
   const [userInput, setUserInput] = useState('')
   const [autocomplete, setAutocomplete] = useState('')
   const inputRef = useRef(null)
+  const isMobile = useIsMobile()
   
   const fullText = 'Building the Future'
   
@@ -74,17 +91,18 @@ function HeroSection({ onNavigate }) {
   }, [isTyping])
   
   useEffect(() => {
-    // Focus input on mount
-    if (inputRef.current) {
+    // Only auto-focus on desktop
+    if (!isMobile && inputRef.current) {
       inputRef.current.focus()
     }
-  }, [])
+  }, [isMobile])
   
   useEffect(() => {
-    if (!isTyping && inputRef.current) {
+    // Only auto-focus after typing on desktop
+    if (!isTyping && !isMobile && inputRef.current) {
       inputRef.current.focus()
     }
-  }, [isTyping])
+  }, [isTyping, isMobile])
   
   const handleInputChange = (e) => {
     const value = e.target.value.toLowerCase()
@@ -143,7 +161,7 @@ function HeroSection({ onNavigate }) {
       <BinaryRain />
       <div className="page hero-section">
         <div className="terminal-container">
-            <div className="terminal-header">
+          <div className="terminal-header">
             JETIMWORKS CONSULTING v1.0
           </div>
           <div className="terminal-body">
@@ -167,23 +185,25 @@ function HeroSection({ onNavigate }) {
               ))}
             </div>
             
-            <div className="input-line" onClick={() => inputRef.current?.focus()}>
-              <span className="prompt">$</span>
-              <div className="command-input-container">
-                <span className="autocomplete">{autocomplete}</span>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  className="command-input"
-                  value={userInput}
-                  onChange={handleInputChange}
-                  onKeyDown={handleKeyDown}
-                  placeholder="Enter command..."
-                  autoComplete="off"
-                  spellCheck="false"
-                />
+            {!isMobile && (
+              <div className="input-line" onClick={() => inputRef.current?.focus()}>
+                <span className="prompt">$</span>
+                <div className="command-input-container">
+                  <span className="autocomplete">{autocomplete}</span>
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    className="command-input"
+                    value={userInput}
+                    onChange={handleInputChange}
+                    onKeyDown={handleKeyDown}
+                    placeholder="Enter command..."
+                    autoComplete="off"
+                    spellCheck="false"
+                  />
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

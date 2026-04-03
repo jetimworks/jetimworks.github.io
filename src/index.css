@@ -455,8 +455,42 @@ body {
   color: var(--white);
 }
 
-/* Mobile adjustments */
-@media (max-width: 600px) {
+/* Mobile adjustments - larger fonts, text wrapping */
+@media (max-width: 768px) {
+  .terminal-container {
+    padding: clamp(24px, 5vw, 35px);
+    width: clamp(320px, 95vw, 500px);
+  }
+  
+  .terminal-header {
+    font-size: clamp(14px, 3.5vw, 20px);
+    margin-bottom: clamp(20px, 4vw, 30px);
+  }
+  
+  .typing-text {
+    font-size: clamp(24px, 6vw, 36px);
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  .commands-list {
+    font-size: clamp(18px, 4.5vw, 26px);
+    line-height: 2.2;
+  }
+  
+  .commands-label {
+    font-size: clamp(18px, 4.5vw, 26px);
+  }
+  
+  .command-item {
+    font-size: clamp(18px, 4.5vw, 26px);
+    word-break: break-word;
+  }
+  
+  .command-name {
+    font-size: clamp(18px, 4.5vw, 26px);
+  }
+  
   .showroom-page {
     flex-direction: column;
   }
