@@ -20,7 +20,7 @@ function BinaryRain() {
       }
       cols.push({
         id: i,
-        left: `${(i / numColumns) * 100 + 2}%`,
+        left: `${(i / numColumns) * 100 + 3}%`,
         content: binary,
         duration: Math.floor(Math.random() * 8) + 12,
         delay: Math.random() * 4
@@ -108,7 +108,6 @@ function HeroSection({ onNavigate }) {
         onNavigate(match.page)
       }
     } else if (e.key === 'ArrowRight' && autocomplete) {
-      // Fill autocomplete but don't execute
       const match = COMMANDS.find(cmd => 
         cmd.cmd.toLowerCase().startsWith(userInput)
       )
@@ -138,22 +137,23 @@ function HeroSection({ onNavigate }) {
             </div>
             
             <div className="commands-list">
-              <p>Available Commands:</p>
+              <p className="commands-label">Available Commands:</p>
               {COMMANDS.map((cmd) => (
-                <p 
-                  key={cmd.cmd}
-                  className="command-item"
-                  onClick={() => handleCommandClick(cmd.page)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cmd.cmd} - {cmd.label}
+                <p key={cmd.cmd} className="command-item">
+                  <span 
+                    className="command-name"
+                    onClick={() => handleCommandClick(cmd.page)}
+                  >
+                    {cmd.cmd}
+                  </span>
+                  <span className="commands-description"> - {cmd.label}</span>
                 </p>
               ))}
             </div>
             
             <div className="input-line" onClick={() => inputRef.current?.focus()}>
               <span className="prompt">$</span>
-              <div style={{ position: 'relative', display: 'flex' }}>
+              <div className="command-input-container">
                 <span className="autocomplete">{autocomplete}</span>
                 <input
                   ref={inputRef}
