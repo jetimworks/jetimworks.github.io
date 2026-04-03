@@ -68,10 +68,17 @@ function HeroSection({ onNavigate }) {
           clearInterval(timer)
           setIsTyping(false)
         }
-      }, 100)
+      }, 80)
       return () => clearInterval(timer)
     }
   }, [isTyping])
+  
+  useEffect(() => {
+    // Focus input on mount
+    if (inputRef.current) {
+      inputRef.current.focus()
+    }
+  }, [])
   
   useEffect(() => {
     if (!isTyping && inputRef.current) {
@@ -115,6 +122,15 @@ function HeroSection({ onNavigate }) {
         setUserInput(match.cmd)
         setAutocomplete('')
       }
+    } else if (e.key === ' ' && autocomplete && userInput.length > 0) {
+      e.preventDefault()
+      const match = COMMANDS.find(cmd => 
+        cmd.cmd.toLowerCase().startsWith(userInput)
+      )
+      if (match) {
+        setUserInput(match.cmd)
+        setAutocomplete('')
+      }
     }
   }
   
@@ -127,8 +143,8 @@ function HeroSection({ onNavigate }) {
       <BinaryRain />
       <div className="page hero-section">
         <div className="terminal-container">
-          <div className="terminal-header">
-            JETIMWORKS TERMINAL v1.0
+            <div className="terminal-header">
+            JETIMWORKS CONSULTING v1.0
           </div>
           <div className="terminal-body">
             <div className="typing-text">
