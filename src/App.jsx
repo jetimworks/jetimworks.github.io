@@ -15,7 +15,7 @@ function App() {
     setTimeout(() => {
       setCurrentPage(page)
       setIsFlipped(false)
-    }, 800)
+    }, 1200)
   }
 
   const goBack = () => {
@@ -23,7 +23,7 @@ function App() {
     setTimeout(() => {
       setCurrentPage('hero')
       setIsFlipped(false)
-    }, 800)
+    }, 1200)
   }
 
   const renderPage = () => {
@@ -45,9 +45,12 @@ function App() {
     <div className="app-container">
       <motion.div
         className={`page-container ${isFlipped ? 'flipped' : ''}`}
-        initial={{ rotateY: 0 }}
-        animate={{ rotateY: isFlipped ? 180 : 0 }}
-        transition={{ duration: 0.8, ease: [0.68, -0.55, 0.265, 1.55] }}
+        initial={{ rotateY: 0, scale: 1 }}
+        animate={{ 
+          rotateY: isFlipped ? 90 : 0,
+          scale: isFlipped ? 0.95 : 1
+        }}
+        transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
         style={{ transformStyle: 'preserve-3d', position: 'absolute', width: '100%', height: '100%' }}
       >
         {renderPage()}
