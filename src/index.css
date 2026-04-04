@@ -264,6 +264,8 @@ body {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  backface-visibility: visible;
 }
 
 .page-container.flipped {
