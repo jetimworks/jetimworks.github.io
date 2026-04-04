@@ -15,7 +15,7 @@ function App() {
     setTimeout(() => {
       setCurrentPage(page)
       setIsFlipped(false)
-    }, 500)
+    }, 800)
   }
 
   const goBack = () => {
@@ -23,7 +23,7 @@ function App() {
     setTimeout(() => {
       setCurrentPage('hero')
       setIsFlipped(false)
-    }, 500)
+    }, 800)
   }
 
   const renderPage = () => {
