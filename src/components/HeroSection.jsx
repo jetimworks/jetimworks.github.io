@@ -105,7 +105,13 @@ function HeroSection({ onNavigate }) {
   }, [isTyping, isMobile])
   
   const handleInputChange = (e) => {
-    const value = e.target.value.toLowerCase()
+    let value = e.target.value.toLowerCase()
+    
+    // Prepend slash if first character isn't one (subtle, don't show it)
+    if (value.length > 0 && value[0] !== '/') {
+      value = '/' + value
+    }
+    
     setUserInput(value)
     
     if (value.length === 0) {

@@ -360,6 +360,16 @@ body {
   word-break: break-all;
 }
 
+.contactus-content .book-meeting {
+  font-size: clamp(12px, 2vw, 24px);
+  opacity: 0.8;
+}
+
+.contactus-content a {
+  color: var(--green);
+  text-decoration: underline;
+}
+
 /* Fun Fact Page */
 .funfact-page {
   flex-direction: column;
