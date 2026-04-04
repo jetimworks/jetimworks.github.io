@@ -5,9 +5,9 @@
 }
 
 :root {
-  --white: #eef0ed;
-  --green: #00ff00;
-  --green-dark: #00cc00;
+  --white: #0a0f0a;
+  --green: #00ff41;
+  --green-dark: #00cc33;
   --font-header: 'Bruno Ace SC', 'Press Start 2P', cursive;
   --font-terminal: 'Press Start 2P', cursive;
   --font-body: 'Space Mono', monospace;
