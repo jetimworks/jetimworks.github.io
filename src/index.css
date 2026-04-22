@@ -745,3 +745,43 @@ body {
     z-index: 100;
   }
 }
+
+/* Products Page - Small centered box */
+.products-box {
+  background-color: var(--white);
+  border: 4px solid var(--green);
+  padding: 40px;
+  text-align: center;
+  max-width: 500px;
+}
+
+.products-box h1 {
+  font-family: var(--font-header);
+  font-size: clamp(24px, 4vw, 48px);
+  color: var(--green);
+  margin-bottom: 25px;
+}
+
+.products-box .products-feature {
+  font-family: var(--font-body);
+  font-size: clamp(14px, 2vw, 18px);
+  color: var(--green);
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.products-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--green);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.8vw, 16px);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.products-cta:hover {
+  background-color: var(--green-dark);
+}
