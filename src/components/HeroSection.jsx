@@ -3,7 +3,6 @@ import { useState, useEffect, useRef, useMemo } from 'react'
 const COMMANDS = [
   { cmd: '/show-room', page: 'showroom', label: 'View our showcase' },
   { cmd: '/contact-us', page: 'contactus', label: 'Get in touch' },
-  { cmd: '/fun-fact', page: 'funfact', label: 'Random tech facts' },
   { cmd: '/products', page: 'products', label: 'Explore our products' }
 ]
 

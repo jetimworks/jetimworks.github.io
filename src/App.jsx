@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import HeroSection from './components/HeroSection'
 import ShowRoom from './components/ShowRoom'
 import ContactUs from './components/ContactUs'
-import FunFact from './components/FunFact'
 import Products from './components/Products'
 
 function App() {
@@ -32,8 +31,6 @@ function App() {
         return <ShowRoom onBack={goBack} />
       case 'contactus':
         return <ContactUs onBack={goBack} />
-      case 'funfact':
-        return <FunFact onBack={goBack} />
       case 'products':
         return <Products onBack={goBack} />
       default:
