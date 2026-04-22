@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const COMMANDS = [
   { cmd: '/show-room', page: 'showroom', label: 'View our showcase' },
@@ -22,46 +22,6 @@ function useIsMobile(breakpoint = 768) {
   return isMobile
 }
 
-function BinaryRain() {
-  const columns = useMemo(() => {
-    const cols = []
-    const numColumns = 6
-    for (let i = 0; i < numColumns; i++) {
-      let binary = ''
-      const length = Math.floor(Math.random() * 15) + 10
-      for (let j = 0; j < length; j++) {
-        binary += Math.random() > 0.5 ? '1' : '0'
-        if (j < length - 1) binary += ' '
-      }
-      cols.push({
-        id: i,
-        left: `${(i / numColumns) * 100 + 3}%`,
-        content: binary,
-        duration: Math.floor(Math.random() * 8) + 12,
-        delay: Math.random() * 4
-      })
-    }
-    return cols
-  }, [])
-
-  return (
-    <div className="binary-rain">
-      {columns.map(col => (
-        <div
-          key={col.id}
-          className="binary-column"
-          style={{
-            left: col.left,
-            animationDuration: `${col.duration}s`,
-            animationDelay: `${col.delay}s`
-          }}
-        >
-          {col.content}
-        </div>
-      ))}
-    </div>
-  )
-}
 
 function HeroSection({ onNavigate }) {
   const [displayText, setDisplayText] = useState('')
@@ -163,7 +123,6 @@ function HeroSection({ onNavigate }) {
   
   return (
     <>
-      <BinaryRain />
       <div className="page hero-section">
         <div className="terminal-container">
           <div className="terminal-header">
