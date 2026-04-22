@@ -845,3 +845,51 @@ body {
 .products-cta:hover {
   background-color: var(--green-dark);
 }
+
+/* Products Page - Box overlay fix */
+.products-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.products-box {
+  background-color: var(--white);
+  border: 4px solid var(--green);
+  padding: 40px;
+  text-align: center;
+  height: 33vh;
+  min-height: 250px;
+  max-height: 400px;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 10;
+}
+
+.products-box h1 {
+  font-family: var(--font-body);
+  font-size: clamp(32px, 6vw, 64px);
+  color: var(--green);
+  letter-spacing: 1px;
+}
+
+.products-byline {
+  font-family: var(--font-body);
+  font-size: clamp(12px, 1.5vw, 16px);
+  color: var(--green);
+  opacity: 0.7;
+  margin-top: -10px;
+}
+
+.products-desc {
+  font-family: var(--font-body);
+  font-size: clamp(14px, 2vw, 18px);
+  color: var(--green);
+  max-width: 400px;
+  line-height: 1.5;
+}
