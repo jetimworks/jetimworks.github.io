@@ -893,3 +893,38 @@ body {
   max-width: 400px;
   line-height: 1.5;
 }
+
+/* Products Page - Fix overflow and coverage */
+.products-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.products-box {
+  background-color: var(--white);
+  border: 4px solid var(--green);
+  padding: 40px;
+  text-align: center;
+  height: 50vh;
+  min-height: 300px;
+  max-height: 450px;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.products-back-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 200;
+}

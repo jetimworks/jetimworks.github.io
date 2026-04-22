@@ -14,7 +14,7 @@ function Products({ onBack }) {
           Learn More →
         </a>
       </div>
-      <button className="back-button" onClick={onBack}>
+      <button className="back-button products-back-button" onClick={onBack}>
         ← Back to Terminal
       </button>
     </div>
