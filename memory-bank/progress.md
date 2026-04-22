@@ -13,7 +13,7 @@
 
 ### Pages
 - [x] **HeroSection**: Terminal interface with working input
-- [x] **ShowRoom**: Project showcase with image
+- [x] **ShowRoom**: Interactive carousel with 8 projects, navigation controls, and skill highlights
 - [x] **ContactUs**: Email link and Calendly booking
 - [x] **FunFact**: Random fact generator with refresh
 - [x] **Products**: Placeholder page (Coming Soon)
@@ -37,7 +37,7 @@
 ## ❌ What's Left / Future Work
 
 ### Content
-- [ ] More projects in ShowRoom (currently only one)
+- [x] More projects in ShowRoom (now features 8 projects with carousel navigation)
 - [ ] Real product descriptions for Products page
 - [ ] More fun facts in FunFact component
 - [ ] Testimonials or client logos
