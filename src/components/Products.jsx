@@ -4,7 +4,7 @@ function Products({ onBack }) {
       <div className="products-box">
         <h1>KraftEmail</h1>
         <p className="products-byline">by Jetimworks</p>
-        <p className="products-desc">Send properly structured emails in both text and HTML layouts with a simple API call.</p>
+        <p className="products-desc">Send properly structured emails in both text and HTML layouts in just a few clicks.</p>
         <a 
           href="https://jetimworks-blog.github.io/" 
           target="_blank" 
