@@ -785,3 +785,63 @@ body {
 .products-cta:hover {
   background-color: var(--green-dark);
 }
+
+/* Products Page - Centered 1/3 height box */
+.products-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-box {
+  background-color: var(--white);
+  border: 4px solid var(--green);
+  padding: 40px;
+  text-align: center;
+  height: 33vh;
+  min-height: 250px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.products-box h1 {
+  font-family: var(--font-header);
+  font-size: clamp(32px, 6vw, 64px);
+  color: var(--green);
+}
+
+.products-byline {
+  font-family: var(--font-terminal);
+  font-size: clamp(12px, 1.5vw, 16px);
+  color: var(--green);
+  opacity: 0.7;
+  margin-top: -10px;
+}
+
+.products-desc {
+  font-family: var(--font-body);
+  font-size: clamp(14px, 2vw, 18px);
+  color: var(--green);
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.products-cta {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  background-color: var(--green);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.8vw, 16px);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.products-cta:hover {
+  background-color: var(--green-dark);
+}

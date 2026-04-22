@@ -2,10 +2,9 @@ function Products({ onBack }) {
   return (
     <div className="page products-page">
       <div className="products-box">
-        <h1>Email User Backend</h1>
-        <p className="products-feature">Send emails from your app via API</p>
-        <p className="products-feature">AI-powered email content generation</p>
-        <p className="products-feature">Secure API key management</p>
+        <h1>KraftEmail</h1>
+        <p className="products-byline">by Jetimworks</p>
+        <p className="products-desc">Send beautiful transactional emails from your app with a simple API call.</p>
         <a 
           href="https://jetimworks-blog.github.io/" 
           target="_blank" 
