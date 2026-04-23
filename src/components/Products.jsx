@@ -3,8 +3,8 @@ function Products({ onBack }) {
     <div className="page products-page">
       <div className="products-box">
         <h1>
-          <a href="https://kraftmail.jetimworks.com/" target="_blank" rel="noopener noreferrer">
-            KraftEmail
+          <a href="https://kraftmail.jetimworks.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+            KraftMail
           </a>
         </h1>
         <p className="products-byline">by Jetimworks</p>
