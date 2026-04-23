@@ -2,11 +2,15 @@ function Products({ onBack }) {
   return (
     <div className="page products-page">
       <div className="products-box">
-        <h1>KraftEmail</h1>
+        <h1>
+          <a href="https://kraftmail.jetimworks.com/" target="_blank" rel="noopener noreferrer">
+            KraftEmail
+          </a>
+        </h1>
         <p className="products-byline">by Jetimworks</p>
         <p className="products-desc">Send properly structured emails in both text and HTML layouts in just a few clicks.</p>
         <a 
-          href="https://jetimworks-blog.github.io/" 
+          href="https://kraftmail.jetimworks.com/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="products-cta"
