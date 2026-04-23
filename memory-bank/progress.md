@@ -16,7 +16,7 @@
 - [x] **ShowRoom**: Interactive carousel with 8 projects, navigation controls, and skill highlights
 - [x] **ContactUs**: Email link and Calendly booking
 - [x] **FunFact**: Random fact generator with refresh
-- [x] **Products**: Placeholder page (Coming Soon)
+- [x] **Products**: KraftEmail product page with links to kraftmail.jetimworks.com
 
 ### Technical
 - [x] React state-based routing (no router needed)
